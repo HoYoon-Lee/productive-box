@@ -5,6 +5,10 @@ on:
       - master
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
+      inputs:
+         manual_run:
+          default: "run workflow manualy" 
 jobs:
   update-gist:
     runs-on: ubuntu-latest
